@@ -8,7 +8,7 @@ const Leaderboard = () => {
     useEffect(() => {
         const fetchLeaderboard = async () => {
             try {
-                const res = await axios.get('/api/dashboard/leaderboard');
+               const res = await axios.get('https://carbon-tracker-api-bhashkar.onrender.com/api/dashboard/leaderboard');
                 setLeaderboard(res.data);
                 setLoading(false);
             } catch (err) {

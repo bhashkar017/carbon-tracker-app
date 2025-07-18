@@ -20,7 +20,7 @@ const DashboardPage = () => {
     try {
       setLoading(true);
       setError(null);
-      const res = await axios.get('/api/dashboard');
+      const res = await axios.get('https://carbon-tracker-api-bhashkar.onrender.com/api/dashboard');
       setDashboardData(res.data);
     } catch (err) {
       console.error("Dashboard fetch error:", err);

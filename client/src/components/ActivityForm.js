@@ -23,7 +23,7 @@ const ActivityForm = ({ onActivityAdded, setShowForm }) => {
     }
     setError('');
     try {
-      await axios.post('/api/activities', { activityType, data });
+      await axios.post('https://carbon-tracker-api-bhashkar.onrender.com/api/activities', { activityType, data });
       onActivityAdded();
     } catch (err) {
       setError('Failed to log activity. Please try again.');

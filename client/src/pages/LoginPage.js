@@ -14,7 +14,7 @@ const LoginPage = ({ loadUser }) => {
   const onSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('/api/users/login', { email, password });
+      const res = await axios.post('https://carbon-tracker-api-bhashkar.onrender.com/api/users/login', { email, password });
       localStorage.setItem('token', res.data.token);
       loadUser(res.data.token);
       navigate('/dashboard');
